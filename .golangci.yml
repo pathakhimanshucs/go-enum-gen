@@ -1,0 +1,20 @@
+linters:
+  disable-all: false
+  enable:
+    - revive
+    - gocheckcompilerdirectives
+    - gocritic
+    - gofumpt
+
+issues:
+  exclude-use-default: false
+  include:
+    - EXC0002 # disable excluding of issues about comments from golint.
+
+linters-settings:
+  staticcheck:
+    # Select the Go version to target.
+    # Default: 1.13
+    go: "1.20"
+    # https://staticcheck.io/docs/options#checks
+    checks: ["all"]
